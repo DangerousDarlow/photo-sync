@@ -20,7 +20,7 @@ if __name__ == "__main__":
                 month = match.group(2)
                 day = match.group(3)
 
-                parent = path.join(args.nas, year, month, day)
+                parent = path.join(args.nas, f'{year}-{month}-{day}')
                 makedirs(parent, exist_ok=True)
 
                 source = path.join(root, filePath)
