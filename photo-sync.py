@@ -4,7 +4,7 @@ from re import compile
 from shutil import copy2
 
 if __name__ == "__main__":
-    parser = ArgumentParser(description='Copy local files to network attached storage')
+    parser = ArgumentParser(description='Copy local files to network attached storage', epilog='example: python .\photo-sync.py --local "C:\Pictures" --nas "\\\\nas\Photos\\2021"')
     parser.add_argument('--local', required=True, type=str, help='Local directory')
     parser.add_argument('--nas', required=True, type=str, help='Network attached storage directory')
     args = parser.parse_args()
